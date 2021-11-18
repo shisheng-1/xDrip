@@ -23,9 +23,6 @@ buildscript {
 }
 
 allprojects {
-    tasks.withType(JavaCompile).configureEach {
-        options.fork = true
-    }
     repositories {
         google()
         jcenter()
