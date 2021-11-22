@@ -23,6 +23,10 @@ buildscript {
 }
 
 allprojects {
+    tasks.withType(JavaCompile){
+        option.fork = true
+    }
+    
     repositories {
         google()
         jcenter()
@@ -37,6 +41,7 @@ allprojects {
         reportFormat = 'text'
     }
 }
+
 
 tasks.withType(JavaCompile) {
     options.compilerArgs << '-Xlint:unchecked'
